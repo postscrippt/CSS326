@@ -22,3 +22,17 @@ if (score >= 80) {
 } else {
     console.log('F');
 }
+
+//Exercise 3: Loops & a simple stopwatch
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+let t = 5;
+const timer = setInterval(() => {
+    console.log(t);
+    t--;
+    if (t < 0) {
+        clearInterval(timer); console.log("Time's up!");
+    }
+}, 1000)
