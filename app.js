@@ -10,3 +10,15 @@ let name = 'Pinya';
 let age = 18;
 let isStudent = true;
 console.log(name + ' is ' + age + ' (student: ' + isStudent + ')');
+
+//Exercise 2: Conditionals -- Grade Classifier
+let score = 6;
+if (score >= 80) {
+    console.log('A');
+} else if (score >= 70) {
+    console.log('B');
+} else if (score >= 50) {
+    console.log('C');
+} else {
+    console.log('F');
+}
