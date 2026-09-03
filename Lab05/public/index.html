@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05 API fetch</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<!-- <body style="    background-color: darkseagreen;
+    font-family: cursive;"> -->
+
+<body>
+    <h1 class="header">Lab05</h1>
+    <section class="thing">
+        <h2 class="subheader">Student List</h2>
+        <ul id="list"></ul>
+        <script>
+            async function load() {
+                const rows = await (await fetch('/students')).json();
+                document.getElementById('list').innerHTML = rows.map(s => `<li>${s.name}-${s.major}</li>`).join('');
+            }
+            load();
+        </script>
+    </section>
+</body>
+
+</html>
