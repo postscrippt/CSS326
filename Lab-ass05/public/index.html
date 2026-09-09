@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05 Assignment API fetch</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="header">Lab05 Assignment Q8</h1>
+    <section class="thing">
+        <h2 class="subheader">Book List</h2>
+        <ul id="list"></ul>
+        <script>
+            async function load() {
+                const rows = await (await fetch('/books')).json();
+                document.getElementById('list').innerHTML = rows.map(s => `<li>${s.title} by ${s.author}- ${s.price}</li>`).join('');
+            }
+            load();
+        </script>
+    </section>
+</body>
+
+</html>
