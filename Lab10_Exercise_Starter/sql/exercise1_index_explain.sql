@@ -26,7 +26,7 @@ EXPLAIN ANALYZE SELECT * FROM courses WHERE title = 'Operating Systems';
 
 -- Results (fill in):
 --                 type     key                 rows       actual time (ms)
---   before:       ____     ____                ______     ______
---   after:        ____     ____                ______     ______
+--   before:       ALL     NULL                100147         29.6
+--   after:        ref     idx_courses_title   1              0.0415
 -- One sentence: what changed, and why?
 --
